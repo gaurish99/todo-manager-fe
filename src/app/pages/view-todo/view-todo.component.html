@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card border-0 shadow-lg my-4">
+                <div class="card-body">
+                    <h3>All Todos</h3>
+                    <div class="alert alert-danger mt-4 border-0" *ngIf="todos.length==0" >
+                        No Todos are available for preview
+                    </div>
+                    <app-todo-view *ngFor="let todo of todos" [todo]="todo"
+                    (deleteEvent)="deleteEventOfChild($event)"
+                    ></app-todo-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

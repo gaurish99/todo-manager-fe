@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card my-4 border-0 shadow-lg">
+                <div class="card-body">
+                    <h3>
+                        Add Todo
+                    </h3>
+                    <form action="" (ngSubmit)="submitForm($event)">
+                        <div class="my-4">
+                            <label for="">Todo Title</label>
+                            <input type="text" class="form-control" placeholder="Enter Here" name="title"
+                                [(ngModel)]="todo.title">
+                        </div>
+                        <div class="my-4">
+                            <label for="">Todo Summary</label>
+                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Enter Here"
+                                name="summary" [(ngModel)]="todo.summary"></textarea>
+                        </div>
+                        <div class="form-check my-2">
+                            <input class="form-check-input border-dark " type="checkbox" id="markAsDone" name="complete"
+                                [(ngModel)]="todo.complete">
+                            <label class="form-check-label" for="markAsDone">
+                                Mark As Done
+                            </label>
+                        </div>
+                        <div class="container text-center my-1">
+
+                            <button type="submit" class="me-2 btn btn-success">Add</button>
+
+                            <button type="reset" class="ms-2 btn btn-warning">Reset</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{todo | json}}
